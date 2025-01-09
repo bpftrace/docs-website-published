@@ -73,14 +73,8 @@ const config = {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
             position: 'left',
-            label: 'Docs',
-            to: '/docs/manpage.md',
-          },
-          {to: '/blog', label: 'Blog', position: 'left'},
-          {
-              href: 'https://github.com/bpftrace/bpftrace/discussions',
-              label: 'Community Discussions',
-              position: 'left',
+            label: 'Home',
+            to: 'https://bpftrace.org/',
           },
           {
             href: 'https://github.com/bpftrace/bpftrace',
@@ -93,37 +87,11 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs + Tutorials',
-            items: [
-              {
-                label: 'Manual page',
-                to: '/docs/manpage',
-              },
-              {
-                label: 'One-Liner Introduction Tutorial',
-                to: '/tutorial-one-liners',
-              },
-            ],
-          },
-          {
-            title: 'Community',
-            items: [
-              {
-                label: 'IRC',
-                href: 'https://webchat.oftc.net/?nick=&channels=%23bpftrace',
-              },
-              {
-                label: 'Talks',
-                href: '/videos',
-              },
-            ],
-          },
-          {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Home',
+                to: 'https://bpftrace.org/',
               },
               {
                 label: 'GitHub',
@@ -132,7 +100,6 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © 2019 Alastair Robertson.`,
       },
       prism: {
         theme: prismThemes.github,
