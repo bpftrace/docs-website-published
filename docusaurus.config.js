@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/bpftrace_Icon-Black-Yellow_BG.svg',
 
   // Set the production url of your site here
-  url: 'https://bpftrace.org',
+  url: 'https://docs.bpftrace.org',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -23,7 +23,7 @@ const config = {
   trailingSlash: false,
 
   organizationName: 'bpftrace',
-  projectName: 'website',
+  projectName: 'docs-website',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
