@@ -16,7 +16,7 @@ function HomepageHeader() {
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <Link to="/manpage">
+          <Link to="0.21/manpage">
           <img
             className={styles.heroImage}
             src={useBaseUrl('img/bpftrace_Full_Logo-Black.svg')}
