@@ -1,6 +1,5 @@
 ---
-sidebar_label: 'bpftrace manual page'
-sidebar_position: 3
+slug: '/'
 ---
 
 # bpftrace(8)
