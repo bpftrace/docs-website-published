@@ -50,13 +50,14 @@ const config = {
       ({
         docs: {
           routeBasePath: '/',
-          editUrl: 'https://github.com/bpftrace/bpftrace/',
+          editUrl: 'https://github.com/bpftrace/bpftrace',
           versions: {
             current: {
               label: 'pre-release',
             },
-            '0.22': {
-              path: `${getLatestVersion()}`,
+            'latest': {
+              path: 'latest',
+              label: `latest (${getLatestVersion()})`,
             },
           },
         },
