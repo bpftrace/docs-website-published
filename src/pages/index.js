@@ -11,19 +11,23 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
+    const latestVersion = useDocusaurusContext().siteConfig.customFields.latestVersion;
     return (
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <Link to="0.21/manpage">
-          <img
-            className={styles.heroImage}
-            src={useBaseUrl('img/bpftrace_Full_Logo-Black.svg')}
-            alt="bpftrace docs"
-          />
-          </Link>
         </div>
+        <p>
+          <Link to={`${latestVersion}/manpage`}>
+            Latest Version ({latestVersion})
+          </Link>
+        </p>
+        <p>
+          <Link to="0.21/manpage">
+            Older Versions (TODO)
+          </Link>
+        </p>
       </header>
     );
 }

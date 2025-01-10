@@ -5,12 +5,18 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import versions from './versions.json';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
+function getLatestVersion() {
+  return versions[0];
+}
+const latestVersion = getLatestVersion();
+
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'bpftrace docs',
+  title: 'bpftrace',
   tagline: 'Dynamic Tracing for the Linux Platform',
   favicon: 'img/bpftrace_Icon-Black-Yellow_BG.svg',
 
@@ -45,10 +51,10 @@ const config = {
           editUrl: 'https://github.com/bpftrace/bpftrace/',
           versions: {
             current: {
-              label: 'staging',
+              label: 'pre-release',
             },
             '0.22': {
-              path: '0.22',
+              path: `${getLatestVersion()}`,
             },
           },
         },
@@ -59,6 +65,9 @@ const config = {
       }),
     ],
   ],
+  customFields: {
+    latestVersion,
+  },
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -66,7 +75,7 @@ const config = {
       // Replace with your project's social card
       image: 'img/bpftrace_Full_Logo-Black-Yellow_BG.svg',
       navbar: {
-        title: 'bpftrace',
+        title: 'bpftrace docs',
         logo: {
           alt: 'bpftrace Logo',
          // replace with bpftrace svg 
@@ -74,8 +83,9 @@ const config = {
         },
         items: [
           {
-            href: 'https://bpftrace.org/',
+            to: 'https://bpftrace.org/',
             label: 'bpftrace.org',
+            target: '_self', // open external link in current window
             position: 'left',
           },
           {
