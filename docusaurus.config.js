@@ -10,7 +10,9 @@ import versions from './versions.json';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 function getLatestVersion() {
-  return versions[0];
+  // versions[0] is "latest", versions[1] will contain the actual version number
+  // of the latest version
+  return versions[1];
 }
 const latestVersion = getLatestVersion();
 
