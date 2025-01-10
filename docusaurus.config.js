@@ -69,6 +69,10 @@ const config = {
         },
         items: [
           {
+            type: 'docsVersionDropdown',
+            position: 'right',
+          },
+          {
             href: 'https://github.com/bpftrace/bpftrace',
             label: 'GitHub',
             position: 'right',
