@@ -59,6 +59,9 @@ const config = {
               path: 'latest',
               label: `latest (${getLatestVersion()})`,
             },
+            '0.22': {
+              banner: 'none',
+            },
           },
         },
         blog: false,
