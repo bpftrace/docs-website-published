@@ -11,11 +11,16 @@ import styles from './index.module.css';
 
 function HomepageHeader() {
     const {siteConfig} = useDocusaurusContext();
+    const latestVersion = useDocusaurusContext().siteConfig.customFields.latestVersion;
     return (
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+          <Link to={`${latestVersion}`}>
+            <button class="button button--secondary button--lg">
+              View documentation for the latest release ({latestVersion})
+            </button>
+          </Link>
         </div>
       </header>
     );
@@ -23,22 +28,11 @@ function HomepageHeader() {
 
 export default function Home() {
   const {siteConfig} = useDocusaurusContext();
-  const latestVersion = useDocusaurusContext().siteConfig.customFields.latestVersion;
   return (
     <Layout
       title={`${siteConfig.title}: dynamic tracing for the Linux platform`}
       description="Description will go into a meta tag in <head />">
       <HomepageHeader />
-      <p>
-        <Link to={`${latestVersion}`}>
-          Latest Version ({latestVersion})
-        </Link>
-      </p>
-      <p>
-        <Link to="0.22">
-          Older Versions (TODO)
-        </Link>
-      </p>
     </Layout>
   );
 }
