@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'bpftrace',
+  title: 'bpftrace docs',
   tagline: 'Dynamic Tracing for the Linux Platform',
   favicon: 'img/bpftrace_Icon-Black-Yellow_BG.svg',
 
@@ -41,11 +41,16 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/', // Serve the docs at the site's root
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/bpftrace/bpftrace/',
+          routeBasePath: '/',
+          editUrl: 'https://github.com/bpftrace/bpftrace/',
+          versions: {
+            current: {
+              label: 'staging',
+            },
+            '0.22': {
+              path: '0.22',
+            },
+          },
         },
         blog: false,
         theme: {
@@ -68,6 +73,11 @@ const config = {
           src: 'img/bpftrace_Icon-Black-Yellow_BG.svg',
         },
         items: [
+          {
+            href: 'https://bpftrace.org/',
+            label: 'bpftrace.org',
+            position: 'left',
+          },
           {
             type: 'docsVersionDropdown',
             position: 'right',
