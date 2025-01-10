@@ -1,3 +1,0 @@
-# example page
-
-hihi hi
