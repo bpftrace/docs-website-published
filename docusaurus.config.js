@@ -75,18 +75,29 @@ const config = {
       // Replace with your project's social card
       image: 'img/bpftrace_Full_Logo-Black-Yellow_BG.svg',
       navbar: {
-        title: 'bpftrace docs',
+        title: 'bpftrace',
         logo: {
           alt: 'bpftrace Logo',
-         // replace with bpftrace svg 
           src: 'img/bpftrace_Icon-Black-Yellow_BG.svg',
+          href: 'https://bpftrace.org',
+          target: '_self',
         },
         items: [
           {
-            to: 'https://bpftrace.org/',
-            label: 'bpftrace.org',
-            target: '_self', // open external link in current window
+            to: `${getLatestVersion()}`,
+            label: 'Docs',
             position: 'left',
+          },
+          {
+            to: 'https://bpftrace.org/blog',
+            label: 'Blog',
+            target: '_self',
+            position: 'left',
+          },
+          {
+              href: 'https://github.com/bpftrace/bpftrace/discussions',
+              label: 'Community Discussions',
+              position: 'left',
           },
           {
             type: 'docsVersionDropdown',
@@ -96,24 +107,6 @@ const config = {
             href: 'https://github.com/bpftrace/bpftrace',
             label: 'GitHub',
             position: 'right',
-          },
-        ],
-      },
-      footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Home',
-                to: 'https://bpftrace.org/',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/bpftrace/bpftrace',
-              },
-            ],
           },
         ],
       },
