@@ -35,7 +35,7 @@ export default function Home() {
         </Link>
       </p>
       <p>
-        <Link to="0.21">
+        <Link to="0.22">
           Older Versions (TODO)
         </Link>
       </p>
