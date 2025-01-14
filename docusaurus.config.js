@@ -81,18 +81,22 @@ const config = {
       // Replace with your project's social card
       image: 'img/bpftrace_Full_Logo-Black-Yellow_BG.svg',
       navbar: {
-        title: 'bpftrace',
         logo: {
           alt: 'bpftrace Logo',
-          src: 'img/bpftrace_Icon-Black-Yellow_BG.svg',
-          href: 'https://bpftrace.org',
-          target: '_self',
+          src: 'img/bpftrace_Full_Logo-Black.svg',
         },
         items: [
           {
+            to: 'https://bpftrace.org/learn',
+            label: 'Learn',
+            position: 'left',
+          },
+          {
             to: `${getLatestVersion()}`,
             label: 'Docs',
+            target: '_self', // open external link in current window
             position: 'left',
+            className: 'navbar__link--active',
           },
           {
             to: 'https://bpftrace.org/blog',
@@ -102,7 +106,7 @@ const config = {
           },
           {
               href: 'https://github.com/bpftrace/bpftrace/discussions',
-              label: 'Community Discussions',
+              label: 'Discussions',
               position: 'left',
           },
           {
@@ -116,9 +120,59 @@ const config = {
           },
         ],
       },
+      footer: {
+        style: 'dark',
+        links: [
+          {
+            title: 'Docs + Tutorials',
+            items: [
+              {
+                label: 'Documentation',
+                to: `${getLatestVersion()}`,
+                target: '_self',
+              },
+              {
+                label: 'One-Liner Introduction Tutorial',
+                to: 'https://bpftrace.org/tutorial-one-liners',
+              },
+            ],
+          },
+          {
+            title: 'Community',
+            items: [
+              {
+                label: 'IRC',
+                href: 'https://webchat.oftc.net/?nick=&channels=%23bpftrace',
+              },
+              {
+                label: 'Talks',
+                href: 'https://bpftrace.org/videos',
+              },
+            ],
+          },
+          {
+            title: 'More',
+            items: [
+              {
+                label: 'Blog',
+                to: 'https://bpftrace.org/blog',
+              },
+              {
+                label: 'GitHub',
+                href: 'https://github.com/bpftrace/bpftrace',
+              },
+            ],
+          },
+        ],
+        copyright: `Copyright © 2019 Alastair Robertson.`,
+      },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+      },
+      colorMode: {
+        defaultMode: 'light',
+        disableSwitch: true,
       },
     }),
 };
