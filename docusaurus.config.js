@@ -84,11 +84,14 @@ const config = {
         logo: {
           alt: 'bpftrace Logo',
           src: 'img/bpftrace_Full_Logo-Black.svg',
+          href: 'https://bpftrace.org',
+          target: '_self',
         },
         items: [
           {
             to: 'https://bpftrace.org/learn',
             label: 'Learn',
+            target: '_self',
             position: 'left',
           },
           {
@@ -105,9 +108,10 @@ const config = {
             position: 'left',
           },
           {
-              href: 'https://github.com/bpftrace/bpftrace/discussions',
-              label: 'Discussions',
-              position: 'left',
+            href: 'https://github.com/bpftrace/bpftrace/discussions',
+            label: 'Discussions',
+            target: '_self',
+            position: 'left',
           },
           {
             type: 'docsVersionDropdown',
@@ -134,6 +138,7 @@ const config = {
               {
                 label: 'One-Liner Introduction Tutorial',
                 to: 'https://bpftrace.org/tutorial-one-liners',
+                target: '_self',
               },
             ],
           },
@@ -147,6 +152,7 @@ const config = {
               {
                 label: 'Talks',
                 href: 'https://bpftrace.org/videos',
+                target: '_self',
               },
             ],
           },
@@ -156,6 +162,7 @@ const config = {
               {
                 label: 'Blog',
                 to: 'https://bpftrace.org/blog',
+                target: '_self',
               },
               {
                 label: 'GitHub',
