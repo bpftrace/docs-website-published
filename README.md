@@ -1,19 +1,21 @@
 # Docs Website
 
-This is the home of the [bpftrace docs](https://docs.bpftrace.org) website. The site itself is built using [Docusaurus](https://docusaurus.io/) with the `master` branch hosting the content and the `gh-pages` branch hosting the actual static content that is served through the GitHub pages infrastructure.
+See https://github.com/bpftrace/website for instructions on working with a Docusaurus site.
 
-Steps to develop, test and deploy website changes:
+## Directory Structure
 
-- Clone the website repo:
-	- `git clone git@github.com:bpftrace/docs-website.git`
+The `docs` directory holds documentation for the in-development, unreleased bpftrace version. It should regularly pull in the docs from the bpftrace source repository.
 
-- Setup node modules in repo (on first clone):
-	- `npm install`
+The `versioned_docs` directory holds snapshots of the docs from each released version. The latest version should be duplicated as both `version-x.y` and `version-latest`, to facilitate permalinks.
 
-- Do your changes in your own branch.
+## Updating Docs
 
-- Test your changes locally defaults to `localhost:3000`:
-	- `npm start`
+1. Update the versioned documentation snapshots:
+```
+rm -rf versioned_docs/version-latest
+cp -r docs versioned_docs/version-latest
+cp -r docs versioned_docs/version-x.y
+```
 
-- If everything is OK, push your branch, create a PR and merge to master.
-
+2. Add the new version to `versions.json`, directly underneath `"latest"`.
+3. In `docusaurus.config.js`, update the version number in `config.presets.docs.versions` to refer to the new release.
